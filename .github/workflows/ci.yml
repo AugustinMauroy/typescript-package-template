@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: CI
 
 on:
@@ -7,7 +8,7 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
+  lint-format:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,13 +17,14 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+      # https://biomejs.dev/recipes/continuous-integration/#github-actions
       - name: Lint with Biome
         uses: biomejs/setup-biome@v2
         with:
           version: latest
       - name: Run Biome
-        run: biome ci --apply
+        run: biome ci .
 
   typecheck:
     runs-on: ubuntu-latest
@@ -33,7 +35,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Type check
         run: node --run types:check
 
@@ -46,6 +48,6 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Test
         run: node --run test
