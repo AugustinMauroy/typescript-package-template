@@ -1,9 +1,28 @@
 # @augustinmauroy/typescript-package-template
 
-## Missing part of the template
+This repository is a template for creating a typescript package. That will be published on npm and JSR simutaniously.
 
-- [ ] Explain of the repo
-- [ ] Little bit of thechnical documentation
+Note that this template is node.js oriented. But your typescript output can work on other runtime.
+
+## Devlopping with this template
+
+**Using right node.js version**
+
+```bash
+nvm use # or fnm use
+```
+
+**Running tests**
+
+```bash
+node --run test
+```
+
+**Building the project**
+
+```bash
+node --run build
+```
 
 ## Extanding the template
 
