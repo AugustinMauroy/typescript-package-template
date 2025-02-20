@@ -11,6 +11,10 @@
       "dist/**/*.js",
       "dist/**/*.d.ts",
       "dist/**/*.map"
+    ],
+    // https://jsr.io/docs/publishing-packages#un-gitignoring-files-when-not-using-include
+    "exclude": [
+      "!dist"
     ]
   }
 }
