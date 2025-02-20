@@ -28,7 +28,7 @@ jobs:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - name: Generate types
+      - name: Transpile typescript
         run: node --run build
       - name: Publish package to npmjs.com
         env:
