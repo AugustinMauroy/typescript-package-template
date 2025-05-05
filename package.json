@@ -1,11 +1,11 @@
 {
   "name": "@augustinmauroy/typescript-package-template",
   "description": "A template for creating a TypeScript package",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "author": "Augustin Mauroy",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/mod.js",
   "files": ["README.md", "LICENSE", "dist"],
   "scripts": {
     "biome:format:fix": "biome format --fix ./",
@@ -28,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AugustinMauroy/typescript-package-template/"
+    "url": "git+https://github.com/AugustinMauroy/typescript-package-template.git"
   }
 }

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import Person from "../src/index.ts";
+import Person from "../src/mod.ts";
 
 describe("Person", () => {
 	const alice = new Person("Alice", 25, "EUR");
